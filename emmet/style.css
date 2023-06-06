@@ -1,0 +1,36 @@
+.heading {
+  box-sizing: border-box;
+  display: flex;
+  display: grid;
+  background-color: #5b2c2c;
+  position: relative;
+  position: relative;
+  text-align: center;
+  text-align: right;
+  float: left;
+  float: right;
+  font-size: 30px;
+  width: 100px;
+  width: 30%;
+  width: 100%;
+  width: 30%;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.block {
+  background-color: #ed7b7b;
+  height: 100vh;
+  width: 100vw;
+}
+.block2 {
+  background-color: rgb(25, 159, 86);
+  height: 100vh;
+  width: 99vw;
+}
+
+.goodNight {
+}
+
+#firstone {
+}
