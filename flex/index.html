@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 속성으로 자유롭게 정렬하기</title>
+    <style>
+      /* 균등 분배 예제 */
+      .parent1 {
+        border: 1px solid #000;
+        width: 1280px;
+        height: 200px;
+        display: flex;
+      }
+
+      .parent1 div {
+        border: 1px solid red;
+        flex: 1;
+      }
+
+      /* 정렬 예제 */
+      .card {
+        width: 400px;
+        border: 1px solid #000;
+        padding: 20px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content {
+        border: 1px solid #000;
+        width: 70%;
+      }
+
+      /* order 예제 */
+      .parent2 {
+        border: 1px solid #000;
+        display: flex;
+      }
+
+      .head,
+      .tail {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #840db7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .head {
+        order: 1;
+      }
+      .tail {
+        order: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>균등분배 예제</h3>
+    <div class="parent1">
+      <div>child</div>
+      <div>child</div>
+      <div>child</div>
+    </div>
+
+    <br />
+
+    <h3>정렬 예제</h3>
+    <div class="card">
+      <div class="content">
+        <h1>Card Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+          accusamus porro magnam perspiciatis alias itaque animi maiores eveniet
+          quos officiis suscipit molestiae hic at modi doloribus, vitae iusto
+          consectetur molestias?
+        </p>
+      </div>
+    </div>
+
+    <br />
+
+    <h3>order 예제</h3>
+    <div class="parent2">
+      <div class="tail">tail</div>
+      <div class="head">head</div>
+    </div>
+  </body>
+</html>
