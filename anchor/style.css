@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+header a {
+  background-color: rgb(3, 89, 76);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-gototop {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #a7f3e586;
+}
