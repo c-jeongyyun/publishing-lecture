@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폰트 아이콘 사용법(XEICON)</title>
+    <style>
+      @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+      .loading {
+        color: rgb(234, 128, 209);
+      }
+
+      .apple-box {
+        border: 1px solid #000;
+        width: 300px;
+        height: 300px;
+      }
+
+      .apple-box::before {
+        content: "\ebb6";
+        font-family: xeicon;
+        font-size: 40px;
+        display: inline-block;
+        color: white;
+        background: #000;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <i class="xi-face xi-5x"></i> xi-5x
+    <i class="xi-spinner-2 xi-spin xi-4x loading"></i>
+
+    <div class="apple-box"></div>
+  </body>
+</html>

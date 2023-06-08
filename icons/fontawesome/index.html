@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폰트 아이콘 사용법(FontAwesome 4.7)</title>
+    <script
+      src="https://kit.fontawesome.com/c1ca556bb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      i {
+        font-size: 100px;
+      }
+
+      .heart-box {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+      .heart-box:before {
+        content: "\f004";
+        font-family: fontawesome;
+        font-size: 4rem;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        border-radius: 50%;
+        background: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 아이콘 가져오기 예제 -->
+    <div>
+      <i class="fas fa-thumbs-up fa-5x"></i>
+      <i class="fas fa-won-sign"></i>
+      <i class="fab fa-github"></i>
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <br />
+
+    <!-- unicode로 아이콘 불러오기 예제 -->
+    <div class="heart-box"></div>
+  </body>
+</html>
