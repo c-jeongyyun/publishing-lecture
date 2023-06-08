@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 폰트 사용법(구글 웹 폰트, 눈누 한글 웹 폰트)</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap");
+
+      /* body에만 설정하게 되면 input 과 버튼은 폰트 적용이 안됨 */
+      /* body {
+        font-family: "Grandiflora One", serif;
+      } */
+
+      /* 모든 태그에 대하여 폰트 일괄 적용해주기 */
+      * {
+        font-family: "Grandiflora One", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is a header 구글</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      officiis sequi magnam labore amet maxime, nisi provident quae rem aut
+      libero hic, similique, sit fugiat sapiente est. Libero, architecto fuga.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+      officiis sequi magnam labore amet maxime, nisi provident quae rem aut
+      libero hic, similique, sit fugiat sapiente est. Libero, architecto fuga.
+    </p>
+    <input type="text" value="hello" />
+    <button>this is button</button>
+  </body>
+</html>
