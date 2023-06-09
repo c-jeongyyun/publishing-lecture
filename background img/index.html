@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object-fit과 object-position으로 img를 배경처럼 사용하기</title>
+  </head>
+  <style>
+    .frame1 {
+      width: 500px;
+      height: 500px;
+      background: url(images/cat.jpeg) no-repeat top right;
+    }
+
+    .frame2 {
+      width: 500px;
+      height: 500px;
+    }
+
+    .frame2 img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+      object-position: top right;
+    }
+  </style>
+  <body>
+    <div class="frame1"></div>
+    <br />
+    <div class="frame2"><img src="images/cat.jpeg" alt="고냥이" /></div>
+  </body>
+</html>
