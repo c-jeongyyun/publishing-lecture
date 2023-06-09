@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter 속성으로 이미지 색상을 자유자재로 변경하기</title>
+    <style>
+      .color {
+        color: #ff9ff3;
+      }
+
+      .img-size {
+        width: 100px;
+        height: 100px;
+      }
+      .img1 {
+        /* 색상 코드: #ff9ff3 */
+        filter: invert(81%) sepia(31%) saturate(995%) hue-rotate(277deg)
+          brightness(102%) contrast(103%);
+      }
+
+      .img2 {
+        filter: invert(81%) sepia(31%) saturate(995%) hue-rotate(277deg)
+          brightness(102%) contrast(103%);
+      }
+
+      .img3 {
+        filter: invert(81%) sepia(31%) saturate(995%) hue-rotate(277deg)
+          brightness(102%) contrast(103%);
+      }
+    </style>
+  </head>
+  <body>
+    <div>원본   |     수정본</div>
+    <div>
+        <img class="img-size" src="images/icon-user.png" alt="user" />
+        <img class="img1 img-size" src="images/icon-user.png" alt="user" />
+        <hr />
+        <img src="images/icon-youtube.png" alt="youtube" />
+        <img class="img2" src="images/icon-youtube.png" alt="youtube" />
+        <hr />
+        <img class="img-size" src="images/icon-mask.svg" alt="youtube" />
+        <img class="img3 img-size" src="images/icon-mask.svg" alt="youtube" />
+      </body>
+    </div>
+</html>
