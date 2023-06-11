@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 버튼 & 네비게이션 - 3타입 상단 네비게이션 (type 3)</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #dedede;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #222;
+      }
+
+      header {
+        background-color: #fff;
+        box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      header nav {
+        width: 1200px;
+        margin: 0 auto;
+        display: flow-root;
+        /* border: 1px solid #f80c0c; */
+      }
+
+      nav div {
+        height: 80px;
+        /* border: 1px solid #000; */
+        line-height: 80px;
+      }
+
+      .logo {
+        width: 180px;
+        float: right;
+      }
+
+      .logo a {
+        width: inherit;
+        height: inherit;
+      }
+
+      .logo a img {
+        width: inherit;
+        height: inherit;
+        object-fit: contain;
+      }
+
+      .gnb {
+        float: left;
+        text-align: center;
+      }
+
+      .gnb a {
+        margin: 10px;
+      }
+
+      .rnb {
+        float: left;
+        width: 70px;
+        text-align: right;
+      }
+
+      .rnb a {
+        background-color: #0a727b;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="gnb">
+          <a href="#none">강의</a>
+          <a href="#none">로드맵</a>
+          <a href="#none">멘토링</a>
+          <a href="#none">커뮤니티</a>
+          <a href="#none">인프런</a>
+        </div>
+        <div class="rnb">
+          <a href="#none">로그인</a>
+        </div>
+        <div class="logo">
+          <a href="#none">
+            <img src="images/inflearn_logo.png" alt="인프런 로고" />
+          </a>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
