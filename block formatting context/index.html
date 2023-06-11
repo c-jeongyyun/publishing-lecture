@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test block formatting context</title>
+    <style>
+      .parent-friend {
+        width: 300px;
+        height: 300px;
+        background: #000;
+      }
+
+      .parent {
+        border: 3px solid #ffd504;
+        width: 100%;
+        display: flow-root;
+        /* height: 100px; */
+        /* display: inline-block; */
+        /* float: left; */
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        /* background-color: #807a7a; */
+        border: 2px solid #000;
+        background-color: transparent;
+        float: left;
+        /* display: inline-block; */
+      }
+
+      .second-child {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #0d34cc;
+        float: left;
+        /* display: inline-block; */
+        /* display: table-row; */
+      }
+
+      .lash-child {
+        width: 200px;
+        height: 200px;
+        background-color: #b13a3a;
+        /* display: inline-block; */
+
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent-friend"></div>
+
+    <div class="parent">
+      <div class="child">
+        a
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+        assumenda. -->
+      </div>
+      <div class="second-child">
+        b
+        <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque tempora
+        delectus autem sapiente quasi, quis qui cum. Eum, facere earum
+        architecto consequuntur accusantium qui eveniet! Recusandae dolores
+        alias facilis necessitatibus, aut ex? Architecto doloribus aspernatur,
+        nisi porro quod quidem omnis consequatur nesciunt tenetur consequuntur
+        delectus velit impedit dolore nulla reiciendis perspiciatis sequi, fuga
+        dolor repudiandae quos culpa distinctio nam non! Officiis delectus
+        repellendus voluptatibus, suscipit at, sint voluptatum saepe, adipisci
+        quaerat reprehenderit aliquid cumque accusantium expedita assumenda sit
+        ipsum odit eius nam ipsa quisquam fuga? Debitis quo ab neque, labore
+        consequatur veniam unde quam dicta cum earum, vero sed? Molestias,
+        repellat deserunt. Quas, sequi pariatur! Eligendi ad adipisci quas ut
+        nostrum! Distinctio quas delectus facilis fugiat expedita rem culpa
+        nesciunt illum voluptas, veniam temporibus et quasi rerum quod facere
+        sit dolor! Odio ut ratione voluptate placeat porro vero, accusantium
+        consequuntur laborum aliquid excepturi, voluptates error totam facere et
+        cupiditate, blanditiis esse perferendis dignissimos pariatur rem
+        laboriosam modi unde dolores! Qui dicta voluptatum natus neque, iure
+        laudantium architecto inventore repudiandae nam fugit totam. Similique
+        non, aperiam doloribus a nobis facere, laborum velit facilis, ipsum iste
+        delectus sequi commodi soluta adipisci vel ad sed. Dolor eligendi saepe
+        veritatis nobis voluptas incidunt placeat. -->
+      </div>
+
+      <div class="lash-child">
+        c
+        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi
+        sequi, nostrum numquam harum natus iusto pariatur quia repudiandae hic,
+        veritatis temporibus? Aspernatur unde mollitia eius, libero quae et
+        assumenda eos nisi, natus id eligendi in illum, harum delectus commodi.
+        Veritatis, non autem? Consequuntur, dolores soluta voluptates pariatur
+        provident illo. -->
+      </div>
+    </div>
+  </body>
+</html>
