@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testing margin auto</title>
+  </head>
+
+  <style>
+    section {
+      width: 100%;
+      height: 300px;
+      background: #b058bc;
+      position: relative;
+    }
+
+    div {
+      margin: 0 auto;
+      background-color: #f7b305;
+      height: 100px;
+    }
+
+    .width {
+      width: 100px;
+    }
+
+    .float {
+      float: left;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .fixed {
+      position: fixed;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .top-left-0 {
+      top: 0;
+      left: 0;
+    }
+  </style>
+  <body>
+    <section>
+      <div class="width">🟢 width:100px, display:block</div>
+    </section>
+    <br />
+
+    <section>
+      <div class="width inline-block">🔴 width:100px, inline-block</div>
+    </section>
+    <br />
+
+    <section>
+      <div class="width float">🔴 width:100px, float</div>
+    </section>
+    <br />
+
+    <section>
+      <div class="inline-block">🔴 inline-block</div>
+    </section>
+    <br />
+
+    <section>
+      <div class="absolute">🔴 absolute, top,left 미지정</div>
+    </section>
+    <br />
+
+    <section>
+      <div class="absolute top-left-0">🔴 absolute, top:0,left:0</div>
+    </section>
+    <br />
+
+    <section>
+      <div class="fixed top-left-0">🔴 fixed, top:0,left:0</div>
+    </section>
+    <br />
+  </body>
+</html>
