@@ -1,172 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>앵커 만들고 부드럽게 스크롤해서 찾아가기</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>
+      인라인 자바스크립트 활용하기(onclick 자바스크립트 이벤트) - 개인탐구
+      anchor
+    </title>
+
+    <style>
+      header {
+        background: #000;
+        height: 100vh;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <a href="#html">html part</a>
-        <a href="#css">css part</a>
-        <a href="#js">js part</a>
-        <a href="#react">react part</a>
-      </header>
-      <section class="content">
-        <div>
-          <div>
-            <h2 id="html">HTML PART</h2>
-            <hr />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
-              dolore blanditiis dolores eos perspiciatis accusantium sed,
-              officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur.
-            </p>
-            <a href="#" class="btn-gototop"> go to top </a>
-          </div>
-          <div>
-            <h2 id="css">CSS PART</h2>
-            <hr />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
-              dolore blanditiis dolores eos perspiciatis accusantium sed,
-              officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur.
-            </p>
-            <a href="#" class="btn-gototop"> go to top </a>
-          </div>
-          <div>
-            <h2 id="js">JS PART</h2>
-            <hr />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
-              dolore blanditiis dolores eos perspiciatis accusantium sed,
-              officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur.
-            </p>
-            <a href="#" class="btn-gototop"> go to top </a>
-          </div>
-          <div>
-            <h2 id="react">REACT PART</h2>
-            <hr />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
-              dolore blanditiis dolores eos perspiciatis accusantium sed,
-              officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Esse dolore blanditiis dolores
-              eos perspiciatis accusantium sed, officia, mollitia doloribus odio
-              nam est ratione, quibusdam commodi. Perspiciatis cum amet beatae
-              consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing
-              elit. Esse dolore blanditiis dolores eos perspiciatis accusantium
-              sed, officia, mollitia doloribus odio nam est ratione, quibusdam
-              commodi. Perspiciatis cum amet beatae consequuntur. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Esse dolore
-              blanditiis dolores eos perspiciatis accusantium sed, officia,
-              mollitia doloribus odio nam est ratione, quibusdam commodi.
-              Perspiciatis cum amet beatae consequuntur.
-            </p>
-            <a href="#" class="btn-gototop"> go to top </a>
-          </div>
-        </div>
-      </section>
-    </div>
+    <!-- 메일 속성 연결하기 -->
+    <a href="mailto:naver@naver.com">naver@naver.com</a>
+    <!-- 전화번호 속성 연결하기 -->
+    <a href="tel:+82.01.1111.1111">전화번호</a>
   </body>
 </html>
