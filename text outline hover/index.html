@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 호버이펙트 - 아웃라인 텍스트</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+      body {
+        font-family: "Kanit", sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+
+      .portfolio {
+        font-size: 10rem;
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        position: relative;
+        transition: 0.2s;
+      }
+
+      .portfolio:before,
+      .portfolio:after {
+        opacity: 0;
+        content: attr(data-text);
+        -webkit-text-stroke: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+      }
+
+      .portfolio:before {
+        color: darkorange;
+      }
+
+      .portfolio:after {
+        color: rgb(229, 1, 191);
+      }
+
+      /* Hover effect */
+      .portfolio:hover {
+        color: white;
+      }
+
+      .portfolio:hover:before,
+      .portfolio:hover:after {
+        opacity: 1;
+      }
+
+      .portfolio:hover:before {
+        transform: translate(2%, -2%);
+      }
+
+      .portfolio:hover:after {
+        transform: translate(4%, -4%);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="portfolio" data-text="Portfolio">Portfolio</a>
+  </body>
+</html>
