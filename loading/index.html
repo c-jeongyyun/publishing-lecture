@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 애니메이션 - 아시아나 항공 로딩</title>
+    <style>
+      @import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .frame {
+        position: relative;
+        overflow-x: hidden;
+        padding: 30px 10px;
+      }
+
+      .airplane {
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translate(0, -50%) rotate(90deg);
+
+        font-size: 50px;
+        z-index: 10;
+        color: gray;
+
+        animation: airplane-animation 0.8s linear infinite;
+      }
+
+      .dot-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .dot {
+        display: inline-block;
+        animation: dot-animation 0.8s linear infinite;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+
+      .dot:nth-child(1) {
+        background-color: #b00000;
+        animation-delay: 0s;
+      }
+
+      .dot:nth-child(2) {
+        background-color: #fa5305;
+        animation-delay: 0.1s;
+      }
+
+      .dot:nth-child(3) {
+        background-color: #ffc801;
+        animation-delay: 0.2s;
+      }
+
+      .dot:nth-child(4) {
+        background-color: #0900b0;
+        animation-delay: 0.3s;
+      }
+
+      .dot:nth-child(5) {
+        background-color: #0e0e0e;
+        animation-delay: 0.4s;
+      }
+
+      @keyframes airplane-animation {
+        0% {
+          left: -30px;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes dot-animation {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+          transform: scale(1.3);
+        }
+        60% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <i class="xi-airplane airplane"></i>
+
+      <div class="dot-group">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </body>
+</html>
