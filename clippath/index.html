@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 호버이펙트 - 클립패쓰(Clip-path) 이미지 오버레이</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+
+      .frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .cat-frame {
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+
+      .cat-frame::after {
+        content: "";
+
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, calc(100% + 20px));
+
+        width: 300px;
+        height: 50px;
+
+        background: radial-gradient(
+          rgba(0, 0, 0, 0.338),
+          transparent,
+          transparent
+        );
+
+        transition: 0.3s;
+        opacity: 1;
+      }
+
+      .cat-frame:hover::after {
+        transform: translate(-50%, calc(100% + 20px)) scale(80%);
+        opacity: 0.8;
+      }
+
+      .clip-path {
+        width: inherit;
+        height: inherit;
+        clip-path: polygon(
+          50% 19%,
+          86% 0,
+          100% 60%,
+          75% 100%,
+          25% 100%,
+          0% 60%,
+          14% 0
+        );
+
+        position: relative;
+        transition: 0.3s;
+      }
+
+      .cat-frame:hover .clip-path {
+        transform: translate(0%, -10%);
+      }
+
+      .clip-path img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        object-position: left;
+      }
+
+      .cat-frame:hover > .clip-path .caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .cat-frame .caption {
+        opacity: 0;
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(20px);
+
+        width: inherit;
+        height: inherit;
+        padding: 0 40px;
+        text-align: center;
+
+        color: white;
+
+        transition: 0.3s;
+      }
+
+      .cat-frame:nth-child(1) .clip-path .caption {
+        background: linear-gradient(transparent, rgb(146, 172, 146));
+      }
+      .cat-frame:nth-child(2) .clip-path .caption {
+        background: linear-gradient(transparent, rgb(248, 199, 84));
+      }
+      .cat-frame:nth-child(3) .clip-path .caption {
+        background: linear-gradient(transparent, rgb(226, 214, 163));
+      }
+
+      .cat-frame .caption h1 {
+        font-size: 1rem;
+      }
+
+      .cat-frame .caption p {
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="cat-frame">
+        <div class="clip-path">
+          <div class="caption">
+            <h1>Cat's Anatomy</h1>
+            <p>
+              The cat is similar in anatomy to the other felid species: it has a
+              strong flexible body, quick reflexes, sharp teeth, and retractable
+              claws adapted to killing small prey like mice and rats.
+            </p>
+          </div>
+          <img src="images/cat1.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="cat-frame">
+        <div class="clip-path">
+          <div class="caption">
+            <h1>The Hunter</h1>
+            <p>
+              Although the cat is a social species, it is a solitary hunter. As
+              a predator, it is crepuscular, i.e. most active at dawn and dusk.
+            </p>
+          </div>
+          <img src="images/cat2.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="cat-frame">
+        <div class="clip-path">
+          <div class="caption">
+            <h1>Domestic cats</h1>
+            <p>
+              Female domestic cats can have kittens from spring to late autumn,
+              with litter sizes often ranging from two to five kittens.[9]
+              Domestic cats are bred and shown at events as registered pedigreed
+              cats, a hobby known as cat fancy.
+            </p>
+          </div>
+          <img src="images/cat3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
