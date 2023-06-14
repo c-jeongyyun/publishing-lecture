@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - 폰트어썸 UI</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+
+      /* Reset default styles */
+
+      * {
+        font-family: "Quicksand", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* Add custom styles */
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .intro .inner {
+        width: 800px;
+        text-align: center;
+        background-color: #e7eefe;
+        padding: 20px 40px;
+      }
+
+      .intro .inner h1 {
+      }
+
+      .intro .inner p {
+        color: #747474;
+      }
+
+      .btns {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .btns .btn {
+        padding: 7px 20px;
+        border-radius: 3px;
+        border: 1px solid #747474;
+        box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      .download {
+        background-color: #fff;
+        border-color: #747474;
+      }
+
+      .pro {
+        background-color: rgb(0, 165, 220);
+        color: white;
+        border-color: rgb(3, 94, 124);
+      }
+
+      .download::before,
+      .pro::before {
+        display: inline-block;
+        margin-right: 8px;
+        font-family: xeicon;
+        font-size: 1rem;
+      }
+      .download::before {
+        content: "\eb7c";
+      }
+
+      .pro::before {
+        content: "\ea38";
+      }
+
+      .links a,
+      .links span {
+        font-size: 0.825rem;
+      }
+
+      .links span {
+        color: gray;
+      }
+
+      .links a {
+        color: blue;
+        position: relative;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      .links a::before {
+        content: "";
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #9b9999;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="intro">
+      <div class="inner">
+        <h1>Icons. Easy. Done.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+          dicta pariatur natus molestiae, sint aspernatur similique adipisci
+          esse animi consequatur?
+        </p>
+        <div class="btns">
+          <a href="" class="btn download">Download Free</a>
+          <a href="" class="btn pro">Check out Pro</a>
+        </div>
+        <div class="links">
+          <span>Version 5.8.0</span>
+          <a href="">946 Free Icons</a>
+          <a href="">1,535 Pro Icons</a>
+          <a href="">Old 4.7.0 Docs</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
