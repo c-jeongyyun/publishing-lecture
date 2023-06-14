@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - 예쁜 표(table) 디자인</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+
+      * {
+        font-family: "Quicksand", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        background-color: #fff;
+        width: 900px;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      caption {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      thead {
+        background-color: #b534cb;
+        color: white;
+      }
+
+      thead th:first-child {
+        border-radius: 5px 0 0 0;
+      }
+
+      thead th:last-child {
+        border-radius: 0 5px 0 0;
+      }
+
+      tbody tr {
+        border-bottom: 1px solid #dbd8d8;
+        transition: 0.3s;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: rgba(242, 223, 255, 0.697);
+      }
+
+      tbody tr:hover {
+        background-color: lightgray;
+      }
+
+      tr:last-child {
+        border-bottom: none;
+      }
+
+      th,
+      td {
+        padding: 20px 30px;
+        text-align: center;
+      }
+
+      tbody {
+        color: #444343;
+      }
+
+      tbody > tr > td:last-child {
+        color: rgb(125, 125, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Disney Character Ranking
+      </caption>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Full name</th>
+          <th>Age</th>
+          <th>Job title</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Judy Hops</td>
+          <td>25</td>
+          <td>Police Officer</td>
+          <td>Zootopia</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Mike Wazoski</td>
+          <td>30</td>
+          <td>Scarying Suppoter</td>
+          <td>MU</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Vanellopi</td>
+          <td>12</td>
+          <td>Car Racer</td>
+          <td>Sugar Rush</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Wreck it Ralph</td>
+          <td>22</td>
+          <td>Wrecker</td>
+          <td>Wreck it Ralph</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Woody</td>
+          <td>40</td>
+          <td>Cowboy</td>
+          <td>Andy's house</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Dumbo</td>
+          <td>5</td>
+          <td>Elephant</td>
+          <td>Circus</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
