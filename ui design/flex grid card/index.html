@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - Flex Grid 카드 UI(World Best Cities)</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap");
+
+      * {
+        box-sizing: border-box;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+
+      .best-disney .content {
+        width: 900px;
+        margin: auto;
+      }
+
+      .best-disney .content h1 {
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        position: relative;
+      }
+
+      .best-disney .content h1::after {
+        content: "";
+        width: 100px;
+        height: 3px;
+        background-color: #7a4009aa;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .cards {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+      }
+
+      .card {
+        flex: 1;
+
+        border-radius: 10px;
+        background-color: #f5ead8;
+        padding: 20px;
+      }
+      .card > .img-wrapper {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+      .card:hover > .img-wrapper img {
+        transform: scale(1.15);
+      }
+
+      .card > .img-wrapper img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        transition: 0.3s;
+      }
+
+      .card > h2 {
+        margin: 10px 0;
+      }
+
+      .card > p {
+        height: 100px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 15px;
+      }
+
+      .card .detail-info {
+        display: grid;
+        grid-template-columns: 40px auto auto auto;
+        height: 40px;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        margin: 10px 0;
+      }
+
+      .card .profile {
+        width: 100%;
+        height: inherit;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .card .writer {
+        text-transform: capitalize;
+        flex: 1;
+      }
+      .comment-count,
+      .like-count {
+        justify-self: end;
+        width: auto;
+      }
+
+      .card .explore-btn {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        text-transform: uppercase;
+        color: white;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="best-disney">
+      <div class="content">
+        <h1>The Word Best Disney Animation</h1>
+        <div class="cards">
+          <div class="card">
+            <div class="img-wrapper">
+              <img src="images/disney1.jpeg" alt="" />
+            </div>
+            <h2>Utopia, Zootopia</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              atque nobis est cum quis, saepe minus quaerat sed dignissimos
+              eaque ipsum, laboriosam culpa cumque vitae! Ratione optio
+              perferendis doloremque se
+            </p>
+            <div class="detail-info">
+              <img src="images/profile1.jpg" alt="" class="profile" />
+              <span class="writer">Judy</span>
+              <span class="comment-count">70 <i class="xi-comment-o"></i></span>
+              <span class="like-count">1,800<i class="xi-heart-o"></i></span>
+            </div>
+            <button class="explore-btn">explore</button>
+          </div>
+          <div class="card">
+            <div class="img-wrapper">
+              <img src="images/disney2.jpg" alt="" />
+            </div>
+            <h2>Wreck it, Ralph!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              atque nobis est cum quis, saepe minus quaerat sed dignissimos
+              eaque ipsum, laboriosam culpa cumque vitae! Ratione optio
+              perferendis doloremque se
+            </p>
+            <div class="detail-info">
+              <img src="images/profile2.jpg" alt="" class="profile" />
+              <span class="writer">Vallenope</span>
+              <span class="comment-count"
+                >100 <i class="xi-comment-o"></i
+              ></span>
+              <span class="like-count">21,900<i class="xi-heart-o"></i></span>
+            </div>
+            <button class="explore-btn">explore</button>
+          </div>
+          <div class="card">
+            <div class="img-wrapper">
+              <img src="images/disney3.jpeg" alt="" />
+            </div>
+            <h2>Good bye, Toy Story</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              atque nobis est cum quis, saepe minus quaerat sed dignissimos
+              eaque ipsum, laboriosam culpa cumque vitae! Ratione optio
+              perferendis doloremque se
+            </p>
+            <div class="detail-info">
+              <img src="images/profile3.jpeg" alt="" class="profile" />
+              <span class="writer">Alin</span>
+              <span class="comment-count">70 <i class="xi-comment-o"></i></span>
+              <span class="like-count">1,800<i class="xi-heart-o"></i></span>
+            </div>
+            <button class="explore-btn">explore</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
