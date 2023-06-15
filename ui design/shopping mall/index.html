@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - 스마트 아이템 쇼핑몰</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      @font-face {
+        font-family: "SUITE-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+          format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        font-family: "SUITE-Regular";
+      }
+
+      body {
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+      }
+
+      .showcase {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .showcase .inner {
+        width: 1280px;
+      }
+
+      .showcase .inner h1 {
+        font-size: 32px;
+        text-align: center;
+        margin: 15px 0;
+      }
+
+      .showcase .inner h4 {
+        font-size: 16px;
+
+        margin: 15px 0;
+      }
+
+      .animals {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        counter-reset: animal;
+      }
+      .animal {
+        position: relative;
+      }
+
+      .animal::before {
+        content: counter(animal);
+        counter-increment: animal;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: gray;
+        color: white;
+        z-index: 20;
+      }
+
+      .animal:hover::before {
+        background-color: crimson;
+      }
+
+      .animal .imgs {
+        width: 250px;
+        height: 400px;
+        position: relative;
+      }
+
+      .animal .imgs img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        transition: 0.3s;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+      }
+
+      .animal .imgs img:first-child {
+        z-index: 10;
+      }
+
+      .animal:hover .imgs img:first-child {
+        opacity: 0;
+      }
+
+      .animal-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      .percent {
+        color: #860000;
+        font-size: 18px;
+      }
+
+      .animal-name {
+        font-size: 16px;
+      }
+
+      .donor-num {
+        color: gray;
+        font-size: 14px;
+      }
+
+      .like-label {
+        cursor: pointer;
+      }
+
+      .like-input {
+        display: none;
+      }
+
+      .like-input + .like-empty {
+        display: block;
+        color: gray;
+      }
+
+      .like-input ~ .like-fill {
+        display: none;
+        color: #860000;
+      }
+
+      .like-input:checked + .like-empty {
+        display: none;
+      }
+
+      .like-input:checked ~ .like-fill {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="showcase">
+      <div class="inner">
+        <h1>고양이과 후원하기</h1>
+        <div>
+          <h4>이번주 인기 고양이과</h4>
+          <div class="animals">
+            <div class="animal">
+              <div class="imgs">
+                <img src="images/cat1.jpg" alt="" />
+                <img src="images/tiger1.png" alt="" />
+              </div>
+              <div class="animal-info">
+                <div class="description">
+                  <span class="percent"
+                    ><b>18<small>%</small></b></span
+                  >
+                  <span class="donor">100,000,000원</span>
+
+                  <h5 class="animal-name">고양이과 1</h5>
+                  <span class="donor-num">100명</span>
+                </div>
+                <label class="like-label">
+                  <input type="checkbox" class="like-input" />
+                  <i class="like-empty xi-heart-o"></i>
+                  <i class="like-fill xi-heart"></i>
+                </label>
+              </div>
+            </div>
+            <div class="animal">
+              <div class="imgs">
+                <img src="images/cat2.jpg" alt="" />
+                <img src="images/tiger2.jpeg" alt="" />
+              </div>
+              <div class="animal-info">
+                <div class="description">
+                  <span class="percent"
+                    ><b>18<small>%</small></b></span
+                  >
+                  <span class="donor">100,000,000원</span>
+
+                  <h5 class="animal-name">고양이과 1</h5>
+                  <span class="donor-num">100명</span>
+                </div>
+                <label class="like-label">
+                  <input type="checkbox" class="like-input" />
+                  <i class="like-empty xi-heart-o"></i>
+                  <i class="like-fill xi-heart"></i>
+                </label>
+              </div>
+            </div>
+            <div class="animal">
+              <div class="imgs">
+                <img src="images/cat3.jpg" alt="" />
+                <img src="images/tiger3.jpeg" alt="" />
+              </div>
+              <div class="animal-info">
+                <div class="description">
+                  <span class="percent">32<small>%</small></span>
+                  <span class="donor">100,000,000원</span>
+
+                  <h5 class="animal-name">고양이과 1</h5>
+                  <span class="donor-num">100명</span>
+                </div>
+                <label class="like-label">
+                  <input type="checkbox" class="like-input" />
+                  <i class="like-empty xi-heart-o"></i>
+                  <i class="like-fill xi-heart"></i>
+                </label>
+              </div>
+            </div>
+            <div class="animal">
+              <div class="imgs">
+                <img src="images/cat4.jpg" alt="" />
+                <img src="images/tiger4.jpeg" alt="" />
+              </div>
+              <div class="animal-info">
+                <div class="description">
+                  <span class="percent">80<small>%</small></span>
+                  <span class="donor">100,000,000원</span>
+
+                  <h5 class="animal-name">고양이과 4</h5>
+                  <span class="donor-num">100명</span>
+                </div>
+                <label class="like-label">
+                  <input type="checkbox" class="like-input" />
+                  <i class="like-empty xi-heart-o"></i>
+                  <i class="like-fill xi-heart"></i>
+                </label>
+              </div>
+            </div>
+            <div class="animal">
+              <div class="imgs">
+                <img src="images/cat5.jpeg" alt="" />
+                <img src="images/tiger5.jpeg" alt="" />
+              </div>
+              <div class="animal-info">
+                <div class="description">
+                  <span class="percent"
+                    ><b>18<small>%</small></b></span
+                  >
+                  <span class="donor">100,000,000원</span>
+
+                  <h5 class="animal-name">고양이과 5</h5>
+                  <span class="donor-num">100명</span>
+                </div>
+                <label class="like-label">
+                  <input type="checkbox" class="like-input" />
+                  <i class="like-empty xi-heart-o"></i>
+                  <i class="like-fill xi-heart"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
