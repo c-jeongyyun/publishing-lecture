@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - 폰트어썸 그라디언트 서비스 가격표</title>
+    <script
+      src="https://kit.fontawesome.com/c1ca556bb5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+      * {
+        font-family: "Roboto Condensed", sans-serif;
+        box-sizing: border-box;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+      }
+
+      .price .inner {
+        width: 1280px;
+        text-align: center;
+      }
+
+      .price .inner h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 25px;
+        color: rgb(40, 40, 40);
+      }
+
+      .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .card {
+        width: 300px;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #b1b0b0;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 110%;
+        height: 44%;
+        background-color: rgba(255, 255, 255, 0.248);
+        transform: rotate(-12deg) scale(1.3);
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card:nth-child(1) {
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #ed49e8 100%);
+
+        /* background-image: linear-gradient(
+          -10deg,
+          #ed49e8 0%,
+          #a6c0fe 50%,
+          #8cadf9 50.2%,
+          #6f61cb 100%
+        ); */
+      }
+
+      .card:nth-child(2) {
+        background-image: linear-gradient(120deg, #fee140 0%, #fa709a 100%);
+        /* background-image: linear-gradient(
+          -10deg,
+          #fa709a 0%,
+          #fee140 50%,
+          #fab770 50.2%,
+          #ff8153 100%
+        ); */
+      }
+
+      .card:nth-child(3) {
+        background-image: linear-gradient(120deg, #009efd 0%, #2af598 100%);
+        /* background-image: linear-gradient(
+          -10deg,
+          #2af598 0%,
+          #009efd 50%,
+          #19ebf2 50.2%,
+          #9225f9 100%
+        ); */
+      }
+
+      .card h4 {
+        font-weight: normal;
+      }
+
+      .card .icon {
+        display: inline-block;
+        font-size: 30px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        line-height: 65px;
+        box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .card:nth-child(1) .icon {
+        background-image: linear-gradient(120deg, #a6c0fe 0%, #ed49e8 100%);
+      }
+
+      .card:nth-child(2) .icon {
+        transform: rotate(-45deg);
+        background-image: linear-gradient(120deg, #fee140 0%, #fa709a 100%);
+      }
+
+      .card:nth-child(3) .icon {
+        background-image: linear-gradient(120deg, #009efd 0%, #2af598 100%);
+      }
+
+      .card span {
+        margin: 15px 0;
+        font-size: 3.5rem;
+        position: relative;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .card ul {
+        font-size: 12px;
+        font-weight: 300;
+        position: relative;
+      }
+      .card li .fa-check,
+      .card li .fa-xmark {
+        margin-right: 5px;
+      }
+
+      .card li {
+        line-height: 150%;
+      }
+
+      .card .btn {
+        margin-top: 20px;
+        background-color: #fff;
+        color: rgb(118, 117, 117);
+        padding: 5px 0;
+        width: 120px;
+        border-radius: 20px;
+        font-weight: 300;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+        position: relative;
+      }
+
+      .card .btn:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="price">
+      <div class="inner">
+        <h1>Ultra-Fast & Secure Cloud Web Hosting</h1>
+        <div class="cards">
+          <div class="card">
+            <i class="fa-solid fa-paper-plane icon"></i>
+
+            <h4>Basic</h4>
+            <span><sup>$</sup>25</span>
+            <ul>
+              <li><i class="fa-solid fa-check"></i>10GB Space</li>
+              <li><i class="fa-solid fa-check"></i>3 Domain Names</li>
+              <li><i class="fa-solid fa-check"></i>20 Email Address</li>
+              <li>
+                <i class="fa-solid fa-xmark"></i>
+                Live Support
+              </li>
+            </ul>
+            <a href="#none" class="btn">Order Now</a>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-plane icon"></i>
+            <h4>Standard</h4>
+            <span><sup>$</sup>50</span>
+            <ul>
+              <li><i class="fa-solid fa-check"></i>50GB Space</li>
+              <li><i class="fa-solid fa-check"></i>5 Domain Names</li>
+              <li><i class="fa-solid fa-check"></i>Unlimited Email Address</li>
+              <li><i class="fa-solid fa-xmark"></i>Live Support</li>
+            </ul>
+            <a href="#none" class="btn">Order Now</a>
+          </div>
+          <div class="card">
+            <i class="fa-solid fa-rocket icon"></i>
+
+            <h4>Premium</h4>
+            <span><sup>$</sup>100</span>
+            <ul>
+              <li><i class="fa-solid fa-check"></i>Unlimited Space</li>
+              <li><i class="fa-solid fa-check"></i>50 Domain Names</li>
+              <li><i class="fa-solid fa-check"></i>Unlimited Email Address</li>
+              <li><i class="fa-solid fa-check"></i>Live Support</li>
+            </ul>
+            <a href="#none" class="btn">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
