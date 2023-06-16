@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        display: inline-block;
+        width: 25%;
+        margin: 1%;
+        font-family: serif;
+        border-radius: 5px;
+        padding: 20px;
+        line-height: 1.5rem;
+        font-size: 25px;
+        color: white;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        vertical-align: top;
+      }
+
+      .child:nth-child(1) {
+        background-color: #bf1010;
+      }
+      .child:nth-child(2) {
+        background-color: #007c15;
+      }
+      .child:nth-child(3) {
+        background-color: #ffd500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, acc
+        sicing elit. Deleniti, acc sicing elit. Deleniti, acc
+      </div>
+      <div class="child">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae et ipsam
+        neque illo, doloribus quasi corporis ab? Commodi quam deserunt, dicta at
+        velit tempore alias pariatur natus tempora, accusantium incidunt non
+        magnam quis nisi quos accusamus molestias veritatis odit ad sapiente
+        totam. Laborum sunt dolores molestiae, voluptas laboriosam deserunt
+        excepturi quibusdam illum, quia nemo id labore porro consequatur
+      </div>
+      <div class="child">Lorem ipsum dolo</div>
+    </div>
+  </body>
+</html>
