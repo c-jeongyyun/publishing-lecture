@@ -29,12 +29,24 @@
 
       body {
         margin: 0;
+      }
+
+      .best-disney {
         height: 100vh;
+        /* position: relative; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .best-disney .content {
         width: 900px;
-        margin: auto;
+
+        /* flex 안쓰고 중앙정렬하는 법 */
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
       }
 
       .best-disney .content h1 {
@@ -98,25 +110,27 @@
       }
 
       .card .detail-info {
-        display: grid;
-        grid-template-columns: 40px auto auto auto;
-        height: 40px;
+        display: flex;
+        /* grid-template-columns: auto auto; */
+        justify-content: space-between;
+
         align-items: center;
         gap: 5px;
         font-size: 13px;
         margin: 10px 0;
       }
 
+      .card .detail-info .user-info {
+      }
+
       .card .profile {
-        width: 100%;
-        height: inherit;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
         object-fit: cover;
         border-radius: 50%;
       }
-      .card .writer {
-        text-transform: capitalize;
-        flex: 1;
-      }
+
       .comment-count,
       .like-count {
         justify-self: end;
@@ -148,14 +162,19 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               atque nobis est cum quis, saepe minus quaerat sed dignissimos
-              eaque ipsum, laboriosam culpa cumque vitae! Ratione optio
-              perferendis doloremque se
+              eaque ipsum, laboriosam culpa...
             </p>
             <div class="detail-info">
-              <img src="images/profile1.jpg" alt="" class="profile" />
-              <span class="writer">Judy</span>
-              <span class="comment-count">70 <i class="xi-comment-o"></i></span>
-              <span class="like-count">1,800<i class="xi-heart-o"></i></span>
+              <span class="user-info">
+                <img src="images/profile1.jpg" alt="" class="profile" />
+                Judy
+              </span>
+              <span class="comment-like-info">
+                <span class="comment-count"
+                  >70 <i class="xi-comment-o"></i
+                ></span>
+                <span class="like-count">1,800<i class="xi-heart-o"></i></span>
+              </span>
             </div>
             <button class="explore-btn">explore</button>
           </div>
@@ -167,16 +186,19 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               atque nobis est cum quis, saepe minus quaerat sed dignissimos
-              eaque ipsum, laboriosam culpa cumque vitae! Ratione optio
-              perferendis doloremque se
+              eaque ipsum, laboriosam culpa...
             </p>
             <div class="detail-info">
-              <img src="images/profile2.jpg" alt="" class="profile" />
-              <span class="writer">Vallenope</span>
-              <span class="comment-count"
-                >100 <i class="xi-comment-o"></i
-              ></span>
-              <span class="like-count">21,900<i class="xi-heart-o"></i></span>
+              <span class="user-info">
+                <img src="images/profile2.jpg" alt="" class="profile" />
+                <span class="writer">Vallenope</span>
+              </span>
+              <span class="comment-like-info">
+                <span class="comment-count"
+                  >100 <i class="xi-comment-o"></i
+                ></span>
+                <span class="like-count">21,900<i class="xi-heart-o"></i></span>
+              </span>
             </div>
             <button class="explore-btn">explore</button>
           </div>
@@ -188,14 +210,19 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               atque nobis est cum quis, saepe minus quaerat sed dignissimos
-              eaque ipsum, laboriosam culpa cumque vitae! Ratione optio
-              perferendis doloremque se
+              eaque ipsum, laboriosam culpa...
             </p>
             <div class="detail-info">
-              <img src="images/profile3.jpeg" alt="" class="profile" />
-              <span class="writer">Alin</span>
-              <span class="comment-count">70 <i class="xi-comment-o"></i></span>
-              <span class="like-count">1,800<i class="xi-heart-o"></i></span>
+              <span class="user-info">
+                <img src="images/profile3.jpeg" alt="" class="profile" />
+                <span class="writer">Alin</span>
+              </span>
+              <span class="comment-like-info">
+                <span class="comment-count"
+                  >70 <i class="xi-comment-o"></i
+                ></span>
+                <span class="like-count">1,800<i class="xi-heart-o"></i></span>
+              </span>
             </div>
             <button class="explore-btn">explore</button>
           </div>
