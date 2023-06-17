@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - 개인 프로필 카드(다크모드)</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+
+      * {
+        box-sizing: border-box;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0;
+      }
+      button {
+        border: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .profile-section .content {
+        width: 300px;
+
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+      }
+
+      .profile-section .content .topbar {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        margin-top: 13px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .profile-img img {
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .profile-img i {
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+        border-radius: 50%;
+        background-color: lightseagreen;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(-30%);
+      }
+
+      .profile-section .content h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 4px 0;
+      }
+
+      .profile-section .content h2 {
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(196, 196, 196);
+        margin: 6px 0 10px 0;
+      }
+
+      .profile-section .content p,
+      .email {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.2rem;
+      }
+      .profile-section .content p {
+      }
+
+      .email {
+        display: block;
+        color: rgb(4, 4, 173);
+        margin-top: 10px;
+      }
+
+      .email:hover {
+        text-decoration: underline;
+      }
+
+      .profile-section .content button {
+        margin: 15px 0;
+      }
+
+      .profile-section .content button {
+        font-size: 15px;
+        padding: 5px 40px;
+        border-radius: 15px;
+        background-color: #1cb7c0;
+        color: white;
+        text-transform: capitalize;
+      }
+
+      .sns-list {
+        display: flex;
+        padding: 20px 0;
+        border-top: 1px solid lightgray;
+      }
+
+      .sns-item {
+        flex: 1;
+        height: 100px;
+      }
+
+      .sns-item i {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        font-size: 33px;
+        line-height: 50px;
+        margin-bottom: 5px;
+        color: white;
+      }
+
+      .sns-item:nth-child(1) i {
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+      }
+
+      .sns-item:nth-child(2) i {
+        background-image: linear-gradient(
+          to right,
+          #f78ca0 0%,
+          #f9748f 19%,
+          #fd868c 60%,
+          #fe9a8b 100%
+        );
+      }
+
+      .sns-item:nth-child(3) i {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+      }
+
+      .followers {
+        color: #a09f9f;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-section">
+      <div class="content">
+        <div class="topbar">
+          <span class="dark-mode-icon">
+            <i class="xi-sun dark"></i>
+            <i class="xi-moon dark"></i>
+          </span>
+          <span>
+            <i class="xi-heart-o like"></i>
+            <i class="xi-heart like"></i>
+            <i class="xi-ellipsis-v menu"></i>
+          </span>
+        </div>
+
+        <div class="profile-img">
+          <img src="images/profile.jpg" alt="" class="" />
+          <i class="xi-check-min"></i>
+        </div>
+        <h1>Vanellope</h1>
+        <h2>Sugar Rush Racer & Princess</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores</p>
+        <a class="email" href="mailto:99jenny0614@naver.com"
+          >99jenny0614@naver.com</a
+        >
+        <button>View my portfolio</button>
+
+        <div class="sns-list">
+          <div class="sns-item">
+            <i class="xi-youtube-play"></i>
+            <span>
+              <big>15.6k</big>
+              <span class="followers">followers</span>
+            </span>
+          </div>
+          <div class="sns-item">
+            <i class="xi-instagram"></i>
+            <span>
+              <big>15.6k</big>
+              <span class="followers">followers</span>
+            </span>
+          </div>
+          <div class="sns-item">
+            <i class="xi-twitter"></i>
+            <span>
+              <big>15.6k</big>
+              <span class="followers">followers</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
