@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 섹션 UI 디자인 - 커스텀 체크박스 로그인 폼</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: #686868;
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+      }
+
+      input {
+        outline: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+      }
+
+      .login-section .content {
+        width: 450px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: white;
+        padding: 30px 60px;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color: #5c5b5b;
+      }
+
+      .login-section .content h1 {
+        color: #000;
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .login-section .content form {
+        text-align: left;
+      }
+      .input-list fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      .input-list fieldset legend {
+        font-weight: bold;
+        color: black;
+      }
+
+      .input-list label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        border-bottom: 1.5px solid #cfcfcf;
+      }
+      .input-list label:focus-within {
+        border-bottom: 1.5px solid #686868;
+      }
+
+      .input-list label:focus-within i {
+        color: #686868;
+        /* border-bottom: 1.5px solid #686868; */
+      }
+
+      .input-list i {
+        /* position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%); */
+        font-size: 19px;
+        margin: 0 5px;
+      }
+
+      .input-list input {
+        display: inline-block;
+        height: 100%;
+        flex: 1;
+
+        font-size: 16px;
+        border: none;
+        /* border-bottom: 1.5px solid #cfcfcf; */
+        transition: 0.3s;
+      }
+
+      .input-list input:focus {
+        border: none;
+        /* border-bottom: 1.5px solid #686868; */
+      }
+
+      .input-list input[type="email"]::placeholder {
+        color: rgb(111, 16, 16);
+        transition: opacity 0.3s;
+        opacity: 1;
+      }
+
+      .input-list input[type="email"]:focus::placeholder {
+        opacity: 0;
+      }
+
+      .save-email-forgot-pw {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+      }
+
+      .save-email-label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .save-email-label input {
+        display: none;
+      }
+
+      .save-email-label span {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border: 1px solid #000;
+        border-radius: 3px;
+        position: relative;
+      }
+
+      .save-email-label input:checked + span {
+        border: 1px solid #fea41c;
+      }
+
+      .save-email-label input:checked + span::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 60%;
+        background-color: #fea41c;
+        border-radius: 2px;
+      }
+
+      .forgot-pw {
+      }
+
+      .forgot-pw:hover {
+        text-decoration: underline;
+      }
+
+      .receive-event {
+        text-align: center;
+      }
+
+      .receive-event > div {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .receive-event label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .receive-event input {
+        display: none;
+      }
+
+      .receive-event span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #b0aeae;
+        position: relative;
+      }
+
+      .receive-event input:checked + span {
+        background-color: #0fada5;
+        border: 1px solid #0fada5;
+      }
+
+      .receive-event input:checked + span::before {
+        content: "\e929";
+        font-family: xeicon;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
+      .login-section .content form button {
+        width: 100%;
+        padding: 10px 0;
+        margin: 20px 0;
+        border-radius: 30px;
+        font-size: 18px;
+        text-transform: uppercase;
+        background-image: radial-gradient(
+          circle 248px at center,
+          #16d9e3 0%,
+          #30c7ec 47%,
+          #46aef7 100%
+        );
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        color: white;
+      }
+
+      .auth-login {
+        text-transform: capitalize;
+        color: #686868;
+      }
+
+      .sns-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .sns {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+      .sns:hover {
+        transform: rotateY(360deg);
+      }
+
+      .sns i {
+        font-size: 25px;
+        line-height: 50px;
+        color: white;
+      }
+
+      .sns:nth-child(1) {
+        background-color: #ff5918;
+      }
+      .sns:nth-child(2) {
+        background-color: #274eff;
+      }
+      .sns:nth-child(3) {
+        background-color: #027717;
+      }
+      .sns:nth-child(4) {
+        background-color: #fab508;
+      }
+
+      .sign-up {
+        margin-top: 20px;
+      }
+
+      .sign-up a {
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 200%;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="login-section">
+      <div class="content">
+        <h1>Login Accounts</h1>
+        <form action="">
+          <div class="input-list">
+            <fieldset>
+              <legend>User Email</legend>
+              <label for="id">
+                <i class="xi-user-o"></i>
+                <input type="email" id="id" placeholder="Type your email" />
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>User password</legend>
+
+              <label for="pw">
+                <i class="xi-lock-o"></i>
+                <input
+                  type="password"
+                  id="pw"
+                  placeholder="Type your password"
+                />
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="save-email-forgot-pw">
+            <label class="save-email-label">
+              <input type="checkbox" />
+              <span></span> Save your email
+            </label>
+            <a href="" class="forgot-pw">forgot password?</a>
+          </div>
+
+          <div class="receive-event">
+            Would you like to receive event emails?
+            <div>
+              <label for="receive-event-yes">
+                <input
+                  type="radio"
+                  name="receive-event"
+                  id="receive-event-yes"
+                />
+                <span></span>
+                Yes
+              </label>
+              <label for="receive-event-no">
+                <input
+                  type="radio"
+                  name="receive-event"
+                  id="receive-event-no"
+                />
+                <span></span>
+                No
+              </label>
+            </div>
+          </div>
+
+          <button>Login</button>
+        </form>
+        <div class="auth-login">
+          Or login using
+          <div class="sns-list">
+            <a href="#none" class="sns">
+              <i class="xi-google"></i>
+            </a>
+            <a href="#none" class="sns">
+              <i class="xi-facebook"></i>
+            </a>
+            <a href="#none" class="sns">
+              <i class="xi-naver"></i>
+            </a>
+            <a href="#none" class="sns">
+              <i class="xi-kakaotalk"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sign-up">
+          Have no account yet?
+          <a href="">Sign up</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
