@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>네이버 반응형 회원가입 폼</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        font-size: 16px;
+      }
+
+      fieldset {
+        border: none;
+        margin: 0;
+      }
+
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      body {
+        padding-top: 50px;
+      }
+
+      body form {
+        width: 500px;
+        margin: auto;
+        padding: 0 20px;
+        /* border: 1px solid #000; */
+      }
+
+      form h1 {
+        text-align: center;
+      }
+      form h1 img {
+        width: 200px;
+      }
+
+      fieldset {
+        margin: 30px 0;
+      }
+
+      fieldset legend {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      fieldset .field,
+      form button,
+      select {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      select {
+        padding: 0 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        background: white url(images/drop-down-arrow.png) no-repeat center right
+          10px;
+        background-size: 12px;
+      }
+
+      fieldset .field,
+      select {
+        display: inline-block;
+        border: 1px solid #959595;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 3px;
+      }
+
+      fieldset .field:focus-within,
+      select:focus {
+        border: 1px solid #21a921;
+      }
+
+      fieldset .birth {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+      }
+
+      fieldset .birth .field:nth-child(2) {
+        padding: 0;
+      }
+
+      fieldset .phone {
+        display: flex;
+        gap: 10px;
+      }
+
+      fieldset .phone .field {
+        flex: 2;
+      }
+
+      fieldset .phone button {
+        flex: 1;
+      }
+
+      fieldset .field input {
+        /* flex: 1; */
+        width: 100%;
+        font-size: 1rem;
+        border: none;
+      }
+
+      fieldset .field span,
+      fieldset .field i {
+        color: gray;
+      }
+
+      fieldset .field i {
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 768px) {
+        form {
+          width: 100vw;
+        }
+      }
+
+      /* fieldset .field select {
+        flex: 1;
+        background: transparent;
+        padding: 0 5px;
+        border: none;
+      } */
+
+      form button {
+        background-color: #21a921;
+        border-radius: 3px;
+        border: none;
+        outline: 0;
+        font-size: 16px;
+        color: white;
+      }
+
+      form > button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1>
+        <img src="images/naver_logo.png" alt="" />
+      </h1>
+      <fieldset>
+        <legend>아이디</legend>
+        <div class="field">
+          <input type="text" />
+          <span>@naver.com</span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>비밀번호</legend>
+        <div class="field">
+          <input type="password" />
+          <i class="xi-lock-o"></i>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>생년월일</legend>
+
+        <div class="birth">
+          <div class="field">
+            <input type="number" placeholder="년(4자)" />
+          </div>
+
+          <select>
+            <option value="default" selected disabled>월</option>
+            <option value="1월">1월</option>
+            <option value="2월">2월</option>
+            <option value="3월">3월</option>
+            <option value="4월">4월</option>
+            <option value="5월">5월</option>
+            <option value="6월">6월</option>
+            <option value="7월">7월</option>
+            <option value="8월">8월</option>
+            <option value="9월">9월</option>
+            <option value="10월">10월</option>
+            <option value="11월">11월</option>
+            <option value="12월">12월</option>
+          </select>
+
+          <div class="field">
+            <input type="number" placeholder="일" />
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>전화번호</legend>
+
+        <div class="phone">
+          <div class="field">
+            <input type="text" placeholder="전화번호 입력" />
+          </div>
+          <button>인증번호 받기</button>
+        </div>
+      </fieldset>
+      <button>가입하기</button>
+    </form>
+  </body>
+</html>
