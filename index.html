@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div id="container">
+        <button id="dog">dog</button>
+      </div>
+      <!-- <input type="text" id="input" /> -->
+      <input placeholder="Enter some text" name="name" />
+    </div>
+  </body>
+
+  <script>
+    const dogBtn = document.getElementById("dog");
+
+    const root = document.getElementById("root");
+    const container = document.getElementById("container");
+
+    const dogFound = new CustomEvent("animalfound", {
+      bubbles: true,
+      detail: {
+        name: "dog",
+      },
+    });
+
+    // 적합한 이벤트 수신기 부착
+    root.addEventListener("animalfound", (e) => console.log(e.detail.name));
+    container.addEventListener("animalfound", (e) => {
+      e.stopPropagation();
+      console.log("in container: ", e.detail.name);
+    });
+
+    dogBtn.addEventListener("click", (e) => dogBtn.dispatchEvent(dogFound));
+    console.log(dogBtn);
+    // console.log(input);
+
+    console.log(root);
+
+    // input.addEventListener("input", (e) => document.dispatchEvent(dogFound));
+    // input.addEventListener("change", (e) => console.log(e.target.value));
+
+    // 이벤트 발송
+    // dogBtn.dispatchEvent(catFound);
+
+    // document.dispatchEvent(dogFound);
+  </script>
+</html>
