@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>풀스크린 네비게이션 반응형 포트폴리오</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ul,
+      li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .nav-toggle {
+      }
+
+      .nav-toggle input {
+        display: none;
+      }
+
+      .nav-toggle i {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 0.3s;
+        color: white;
+        background-color: black;
+        font-size: 40px;
+        line-height: 50px;
+        z-index: 10;
+      }
+
+      .nav-toggle input:checked + i {
+        transform: rotate(45deg);
+        background-color: #fefac7;
+        color: black;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        transition: 0.3s;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nav-bg {
+        top: 20px;
+        left: 20px;
+        position: fixed;
+        z-index: 5;
+
+        width: 20px;
+        height: 20px;
+        background: #000;
+        transition: 0.3s;
+
+        /* transform: translateY(-50%); */
+
+        border-radius: 50%;
+      }
+
+      .nav-toggle input:checked ~ nav .nav-bg {
+        transform: scale(330);
+      }
+
+      .nav-toggle input:checked ~ nav a {
+        pointer-events: all;
+      }
+
+      nav a {
+        pointer-events: none;
+        color: white;
+        font-size: 45px;
+        line-height: 80px;
+        position: relative;
+        z-index: 10;
+      }
+
+      nav a::before {
+        content: "";
+        position: absolute;
+
+        background-color: #dbbf0b;
+        bottom: -10px;
+        left: 0;
+        height: 20px;
+        width: 0;
+
+        transform: translateY(-100%);
+        z-index: -1;
+        transition: 0.3s;
+      }
+
+      nav a:hover::before {
+        width: 100%;
+        padding-right: 20px;
+      }
+
+      .nav-toggle input:checked ~ nav {
+        opacity: 1;
+      }
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section h1 {
+        font-size: 40px;
+      }
+
+      section:nth-child(odd) {
+        background: #ffffff;
+      }
+
+      section:nth-child(even) {
+        background: #fefac7;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="nav-toggle-input" class="nav-toggle">
+      <input type="checkbox" id="nav-toggle-input" checked />
+      <i class="xi-plus-thin"></i>
+      <nav>
+        <div class="nav-bg"></div>
+        <ul class="link-list">
+          <li><a href="#first">First</a></li>
+          <li><a href="#second">Second</a></li>
+          <li><a href="#third">Third</a></li>
+        </ul>
+      </nav>
+    </label>
+
+    <section id="first"><h1>First</h1></section>
+    <section id="second"><h1>Second</h1></section>
+    <section id="third"><h1>Third</h1></section>
+  </body>
+</html>
